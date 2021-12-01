@@ -7,9 +7,9 @@ const connect = function () {
     // host: "192.168.0.38", // IP address here,
     // port: 50541// PORT number here,
     host: IP, // IP address here,
-    port: PORT// PORT number here,
-    
+    port: PORT// PORT number here,   
   });
+  
   
   conn.setEncoding("utf8");
   console.log("hello Priyanka welcome to the game!");
