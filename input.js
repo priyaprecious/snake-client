@@ -7,6 +7,7 @@
 //   d: "Move: right"
 // }
 
+
 let connection;
 const setupInput = function (conn) {
   connection = conn;
@@ -17,9 +18,10 @@ const setupInput = function (conn) {
   stdin.on("data", handleUserInput);
   return stdin;
 };
+
 //const conn = connect();
 const handleUserInput = function (key) {
-  console.log(key);
+  //console.log(key);
   if (key === '\u0003') {                         
     process.exit();
   } else if (key === 'w'){
@@ -30,8 +32,12 @@ const handleUserInput = function (key) {
     setTimeout(() => {connection.write('Move: down');}, 1500);
   } else if (key === 'd'){
     setTimeout(() => {connection.write('Move: right');}, 2000);
-  } 
-};
+  } else if (key === 'b'){
+    setTimeout(() => {connection.write('Say: Hello Priyanka');},
+  
+)};
+  };
+
 
 // setupInput().on('data', (key) => {
 //   handleUserInput(key);
